@@ -387,12 +387,12 @@ For hybrid testing in a Kyma scenario, you need to store valid Service Binding d
 
 ```sh
 ## Run in ./code ##
-cds bind -2 <ReleaseName>-srv-destination,<ReleaseName>-srv-xsuaa --on k8s --for hybrid --output-file srv/.cdsrc-private.json
-cds bind hana -2 <ReleaseName>-srv-hana --kind hana --on k8s --for hybrid --output-file srv/.cdsrc-private.json
-cds bind saas-registry -2 <ReleaseName>-srv-saas-registry --kind saas-registry --on k8s --for hybrid --output-file srv/.cdsrc-private.json
-cds bind sm-admin -2 <ReleaseName>-srv-sm-admin --kind service-manager --on k8s --for hybrid --output-file srv/.cdsrc-private.json
-cds bind sm-container -2 <ReleaseName>-srv-sm-container --kind service-manager --on k8s --for hybrid --output-file srv/.cdsrc-private.json
-cds bind alert-notification -2 <ReleaseName>-srv-alert-notification --kind alert-notification --on k8s --for hybrid --output-file srv/.cdsrc-private.json
+cds bind -2 <ReleaseName>-srv-destination,<ReleaseName>-srv-xsuaa --on k8s --for hybrid --out srv/.cdsrc-private.json
+cds bind hana -2 <ReleaseName>-srv-hana --kind hana --on k8s --for hybrid --out srv/.cdsrc-private.json
+cds bind saas-registry -2 <ReleaseName>-srv-saas-registry --kind saas-registry --on k8s --for hybrid --out srv/.cdsrc-private.json
+cds bind sm-admin -2 <ReleaseName>-srv-sm-admin --kind service-manager --on k8s --for hybrid --out srv/.cdsrc-private.json
+cds bind sm-container -2 <ReleaseName>-srv-sm-container --kind service-manager --on k8s --for hybrid --out srv/.cdsrc-private.json
+cds bind alert-notification -2 <ReleaseName>-srv-alert-notification --kind alert-notification --on k8s --for hybrid --out srv/.cdsrc-private.json
 ```
 
 This will create a new *.cdsrc-private.json* file in your **srv** folder, containing all binding details. Those bindings are dynamically resolved when running your application in hybrid mode. 
@@ -421,12 +421,12 @@ Once all Service Keys have been created successfully, please add them to your hy
 
 ```sh
 ## Run in ./code ##
-cds bind -2 <SpaceName>-susaas-destination,<SpaceName>-susaas-uaa --for hybrid --output-file srv/.cdsrc-private.json
-cds bind hana -2 <SpaceName>-susaas-com-hdi-container --kind hana --for hybrid --output-file srv/.cdsrc-private.json
-cds bind saas-registry -2 <SpaceName>-susaas-registry --kind saas-registry --for hybrid --output-file srv/.cdsrc-private.json
-cds bind sm-container -2 <SpaceName>-susaas-service-manager --kind service-manager --for hybrid --output-file srv/.cdsrc-private.json
-cds bind sm-admin -2 <SpaceName>-susaas-service-manager-admin --kind service-manager --for hybrid --output-file srv/.cdsrc-private.json
-cds bind alert-notification -2 <SpaceName>-susaas-alert-notification --kind alert-notification --for hybrid --output-file srv/.cdsrc-private.json
+cds bind -2 <SpaceName>-susaas-destination,<SpaceName>-susaas-uaa --for hybrid --out srv/.cdsrc-private.json
+cds bind hana -2 <SpaceName>-susaas-com-hdi-container --kind hana --for hybrid --out srv/.cdsrc-private.json
+cds bind saas-registry -2 <SpaceName>-susaas-registry --kind saas-registry --for hybrid --out srv/.cdsrc-private.json
+cds bind sm-container -2 <SpaceName>-susaas-service-manager --kind service-manager --for hybrid --out srv/.cdsrc-private.json
+cds bind sm-admin -2 <SpaceName>-susaas-service-manager-admin --kind service-manager --for hybrid --out srv/.cdsrc-private.json
+cds bind alert-notification -2 <SpaceName>-susaas-alert-notification --kind alert-notification --for hybrid --out srv/.cdsrc-private.json
 ```
 
 This will create a new *.cdsrc-private.json* file in your **srv** folder, containing all binding details. Those bindings are dynamically resolved when running your application in hybrid mode. 
@@ -463,8 +463,8 @@ For hybrid testing in a Kyma scenario, you need to store valid Service Binding d
 
 ```sh
 ## Run in ./code ##
-cds bind -2 <ReleaseName>-router-destination,<ReleaseName>-router-xsuaa --on k8s --for hybrid --output-file router/.cdsrc-private.json
-cds bind html5-apps-repo -2 <ReleaseName>-router-html5-apps-repo --kind html5-apps-repo --on k8s --for hybrid --output-file router/.cdsrc-private.json
+cds bind -2 <ReleaseName>-router-destination,<ReleaseName>-router-xsuaa --on k8s --for hybrid --out router/.cdsrc-private.json
+cds bind html5-apps-repo -2 <ReleaseName>-router-html5-apps-repo --kind html5-apps-repo --on k8s --for hybrid --out router/.cdsrc-private.json
 ```
 
 This will create a new *.cdsrc-private.json* file in your **router** folder, containing all binding details. Those bindings are dynamically resolved when running your Application Router in hybrid mode. 
@@ -489,8 +489,8 @@ Once all Service Keys have been created successfully, please add them to your hy
 > **Important** - Please replace the **\<SpaceName>** placeholder with your Cloud Foundry Space name.
 ```sh
 ## Run in ./code ##
-cds bind -2 <SpaceName>-susaas-destination,<SpaceName>-susaas-uaa --for hybrid --output-file router/.cdsrc-private.json
-cds bind html5-apps-repo -2 <SpaceName>-susaas-html5-repo-runtime --kind html5-apps-repo --for hybrid --output-file router/.cdsrc-private.json
+cds bind -2 <SpaceName>-susaas-destination,<SpaceName>-susaas-uaa --for hybrid --out router/.cdsrc-private.json
+cds bind html5-apps-repo -2 <SpaceName>-susaas-html5-repo-runtime --kind html5-apps-repo --for hybrid --out router/.cdsrc-private.json
 ```
 
 This will create a new *.cdsrc-private.json* file in your **router** folder, containing all binding details. Those bindings are dynamically resolved when running your Application Router in hybrid mode. 
@@ -536,8 +536,8 @@ For hybrid testing in a Kyma scenario, you need to store valid Service Binding d
 
 ```sh
 ## Run in ./code ##
-cds bind -2 <ReleaseName>-api-xsuaa-api --on k8s --for hybrid --output-file api/.cdsrc-private.json
-cds bind sm-container -2 <ReleaseName>-api-sm-container --kind service-manager --on k8s --for hybrid --output-file api/.cdsrc-private.json
+cds bind -2 <ReleaseName>-api-xsuaa-api --on k8s --for hybrid --out api/.cdsrc-private.json
+cds bind sm-container -2 <ReleaseName>-api-sm-container --kind service-manager --on k8s --for hybrid --out api/.cdsrc-private.json
 ```
 
 This will create a new *.cdsrc-private.json* file in your **api** folder, containing all binding details. Those bindings are dynamically resolved when running your API Service in hybrid mode. 
@@ -561,8 +561,8 @@ Once all Service Keys have been created successfully, please add them to your hy
 > **Important** - Please replace the **\<SpaceName>** placeholder with your Cloud Foundry Space name.
 ```sh
 ## Run in ./code ##
-cds bind -2 <SpaceName>-susaas-api-uaa --for hybrid --output-file api/.cdsrc-private.json
-cds bind sm-container -2 <SpaceName>-susaas-service-manager --kind service-manager --for hybrid --output-file api/.cdsrc-private.json
+cds bind -2 <SpaceName>-susaas-api-uaa --for hybrid --out api/.cdsrc-private.json
+cds bind sm-container -2 <SpaceName>-susaas-service-manager --kind service-manager --for hybrid --out api/.cdsrc-private.json
 ```
 
 This will create a new *.cdsrc-private.json* file in your **api** folder, containing all binding details. Those bindings are dynamically resolved when running your API Service in hybrid mode. 
