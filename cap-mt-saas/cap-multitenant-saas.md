@@ -47,12 +47,9 @@ This reference architecture is a comprehensive architecture designed to guide de
 
 ### Examples in an SAP context (Mandatory)
 
-List ~3 examples where your SAP BTP reference architecture is used as part of the “SAP standard delivery”. If there is none then describe typical customer use cases.
+SAP Partners use the Business Technology Platform (BTP) to create specialized SaaS solutions for various industries. This reference architecture helps ensure their cloud applications are strong and adaptable. It includes guidelines for security, data management, and integrating with other systems, which speeds up development and improves operations. Following this approach, SAP Partners may offer high-quality SaaS solutions tailored to each industry's needs, addressing specific business challenges in today's dynamic market.
 
-Your list of examples
-
-**DO NOT** use any image or hyperlinks with relative URL or Path. Always use absolute public links.
-
+Additionally, the multitenant architecture introduced on SAP Business Technology Platform (BTP) is utilized in [Circelligence by BCG](https://store.sap.com/dcp/en/product/display-2001014822_live_v1/circelligence-by-bcg). Circelligence by BCG, a partner product, uses this architecture to measure how products are used by its customers.
 
 ### Reasonable alternatives (Optional)
 
