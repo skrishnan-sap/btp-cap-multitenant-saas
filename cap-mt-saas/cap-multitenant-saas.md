@@ -63,7 +63,6 @@ Additionally, the multitenant architecture introduced on SAP Business Technology
 -   [Application Autoscaler	Standard](https://discovery-center.cloud.sap/serviceCatalog/application-autoscaler/?service_plan=standard&region=all&commercialModel=cloud)
 -   [Destination Service](https://discovery-center.cloud.sap/serviceCatalog/destination?service_plan=lite&region=all&commercialModel=cloud)
 -   [SAP Alert Notification service](https://discovery-center.cloud.sap/serviceCatalog/alert-notification?region=all)
--   [SAP Application Logging Service](https://discovery-center.cloud.sap/serviceCatalog/application-logging-service/?region=all)
 -   [SAP Cloud Identity Services](https://discovery-center.cloud.sap/serviceCatalog/identity-authentication?region=all)
 -   [SAP Authorization and Trust Management Service](https://discovery-center.cloud.sap/serviceCatalog/authorization-and-trust-management-service?region=all&tab=feature)
 -   [SAP Cloud Management Service](https://discovery-center.cloud.sap/serviceCatalog/cloud-management-service/?region=all)
