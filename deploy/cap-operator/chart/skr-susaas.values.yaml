@@ -1,0 +1,71 @@
+app:
+  name: skr-susaas
+  domains:
+    primary: susaas.c-68d55f6.stage.kyma.ondemand.com
+    secondary: []
+  subscriptionServerDomain: cap-op.c-68d55f6.stage.kyma.ondemand.com
+
+btp:
+  globalAccountId: 600a39d6-f715-4b95-90b9-f5150dccc7fb
+  provider:
+    subdomain: skr-sandbox
+    tenantId: 77bffa5f-bcc3-4c9e-8aa5-f6023bddf92e
+
+appLabels:
+  app.kubernetes.io/name: susaas
+  app.kubernetes.io/instance: skr-susaas
+
+registrySecrets:
+  - regcred
+
+srv:
+  replicas: 1
+  image: "erp4sme.common.repositories.cloud.sap/local/i048856/btp-mt-saas/capop-susaas-srv"
+  tag: "0.0.36"
+  debugLevel: "all"
+
+router:
+  logLevel: "debug"
+  externalSessionManagement:
+    enabled: "false"
+    # Secret to be used to generate a session cookie. Please generate a unique string with at least 64 characters.
+    # Example value for session secret: 'sI3CMdIcw5DSeb460lZiTEmrtTcXjE6NA5mDf78vdXQunB3QNjLWj1fEt2QIHV0UeOMnCT'
+    sessionSecret: ""
+  replicas: 1
+  image: "erp4sme.common.repositories.cloud.sap/local/i048856/btp-mt-saas/capop-susaas-router"
+  tag: "0.0.36"
+
+api:
+  replicas: 1
+  image: "erp4sme.common.repositories.cloud.sap/local/i048856/btp-mt-saas/capop-susaas-api"
+  tag: "0.0.36"
+
+broker: 
+  replicas: 1
+  image: "erp4sme.common.repositories.cloud.sap/local/i048856/btp-mt-saas/capop-susaas-broker"
+  tag: "0.0.36"
+  catalog:
+    serviceId: 30a98629-04b2-4e35-adfc-7fe556e5fee7
+    plans:
+      default:
+        id: a1aa39cf-44ad-4267-acbb-f982c8ce3a82
+      trial:
+        id: e6d8a8e7-0592-4bda-a5ff-89f9c8c36535
+      premium:
+        id: afe56fd1-3185-4b97-999f-1fe99e5b79df
+  credentials:
+    user: YnJva2VyLXVzZXI=
+    password: cVRxU2FuM1NYZlVFTzJlUkNWbWdXVFBFaDBrMEpEMzk=
+  
+
+hdiDeployer:
+  image: "erp4sme.common.repositories.cloud.sap/local/i048856/btp-mt-saas/capop-susaas-db-com"
+  tag: "0.0.36"
+
+html5AppsDeployer:
+  image: "erp4sme.common.repositories.cloud.sap/local/i048856/btp-mt-saas/capop-susaas-html5-deployer"
+  tag: "0.0.36"
+
+db:
+  # -- HANA Cloud database instance identifier to be used by the application
+  hanaInstanceId:
