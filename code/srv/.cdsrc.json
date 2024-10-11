@@ -34,33 +34,6 @@
       "extensibility": false,
       "toggles": false
     },
-    "------------------ ": "---",
-    "--- DB Settings ---": "---",
-    " ------------------": "---",
-    "db": {
-      "[hybrid]": {
-        "kind": "hana",
-        "vcap": {
-          "label": "service-manager",
-          "plan": "container"
-        }
-      },
-      "[local-with-mtx]": {
-        "kind": "sqlite",
-        "credentials": {
-            "url": "../db.sqlite"
-        },
-        "beta": {
-          "sqlMigration": "true"
-        }
-      },
-      "[development]": {
-        "kind": "sqlite",
-        "credentials": {
-            "url": "../db.sqlite"
-        }
-      }
-    },
     "-------------------- ": "---",
     "--- Auth Settings ---": "---",
     " --------------------": "---",
@@ -110,27 +83,6 @@
             ]
           }
         }
-      }
-    },
-    "---------------------- ": "---",
-    "--- Model Settings ----": "---",
-    " ----------------------": "---",
-    "db-ext": {
-      "[production]": {
-        "model": "../db/hana"
-      },
-      "[local-with-mtx]": {
-        "model": [
-          "../api/srv",
-          "../test"
-        ]
-      },
-      "[development]": {
-        "model": [
-          "../api/srv",
-          "../test",
-          "../db/sqlite"
-        ]
       }
     }
   }

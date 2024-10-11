@@ -16,20 +16,6 @@
                 }
             ]
         },
-        "db": {
-            "kind": "hana-mt",
-            "vcap": {
-                "label": false,
-                "plan": "container"
-            },
-            "pool": {
-                "acquireTimeoutMillis": 10000,
-                "min": 0,
-                "max": 10,
-                "fifo": true
-            }
-        },
-
         "auth": {
             "kind": "xsuaa"
         }
